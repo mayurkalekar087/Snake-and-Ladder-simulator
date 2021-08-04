@@ -7,9 +7,11 @@ namespace Snake_and_Ladder_Program
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Snake & Ladder Game!");
-            int playerposition = 0;
-          
-	    }
+            Random rand = new Random();
+            int checkDice = rand.Next(1, 7);
+            Console.WriteLine(checkDice);
+
+        }
 
 	}
     
