@@ -41,8 +41,8 @@ namespace Snake_and_Ladder_Program
                         break;
 
                 }
+                Console.WriteLine("playerWin " + playerposition);
 
-               
             }
           
 
