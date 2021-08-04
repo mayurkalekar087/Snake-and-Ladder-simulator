@@ -7,28 +7,47 @@ namespace Snake_and_Ladder_Program
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Snake & Ladder Game!");
-            Random rand = new Random();
-            int checkDice = rand.Next(1, 7);
-            Console.WriteLine(checkDice);
-            int snakeladder = rand.Next(1, 4);
-            switch (snakeladder)
-            {
-                case 1:
-                    
-                    Console.WriteLine("player moves ahead ");
-                  
-                    break;
-                case 2:
-                    
-                    Console.WriteLine("Player Moves behind ");
-                    break;
-                case 3:
-                    Console.WriteLine("no play ");
-                    break;
+            int playerposition = 0;
+            int totalNoOfDicePlayed = 0;
 
+            Random rand = new Random();
+
+            while (playerposition != 100)
+            {
+
+                int checkDice = rand.Next(1, 7);
+                int snakeladder = rand.Next(1, 4);
+                Console.WriteLine(checkDice);
+                switch (snakeladder)
+                {
+                    case 1:
+                        playerposition += checkDice;
+                        Console.WriteLine("player moves ahead " + playerposition);
+                        totalNoOfDicePlayed++;
+                        break;
+                    case 2:
+                        playerposition -= checkDice;
+                        Console.WriteLine("Player Moves behind " + playerposition);
+                        if (playerposition < 0)
+                        {
+                            playerposition = 0;
+                        }
+                        totalNoOfDicePlayed++;
+                        break;
+                    case 3:
+                        playerposition += 0;
+                        Console.WriteLine("no play " + playerposition);
+                        totalNoOfDicePlayed++;
+                        break;
+
+                }
+
+               
             }
+          
+
         }
 
-	}
-    
+    }
+
 }
