@@ -41,10 +41,10 @@ namespace Snake_and_Ladder_Program
                         break;
 
                 }
-                Console.WriteLine("playerWin " + playerposition);
+                Console.WriteLine("Number of times dice was played " + totalNoOfDicePlayed);
 
             }
-          
+            Console.WriteLine("playerWin " + playerposition);
 
         }
 
